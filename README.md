@@ -47,14 +47,14 @@ Program for flipflops and verify its truth table in quartus using Verilog progra
 Developed by: **VISAL R**
 
 RegisterNumber: **24008707**
+
 module JK_FF(q,qb,j,k,clock);
 input j,k,clock;
 output reg q;
 output qb;
-
 always @(posedge(clock))
 begin
-	q <= (j&(~q))+ ((~k)&q);
+q <= (j&(~q))+ ((~k)&q);
 end
 assign qb = (~q);
 endmodule
